@@ -27,8 +27,11 @@ tsc LinkedList.ts
 ```
 
 Run the compiled file:
+
 bash```
+
 node LinkedList.js
+
 ```
 # 2. Temperature Converter (React, TypeScript)
 

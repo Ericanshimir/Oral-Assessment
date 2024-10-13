@@ -40,7 +40,7 @@ A class-based React component that converts temperatures between Celsius and Fah
 # How to Run
 
 # Set up a React project:
-bash```
+```bash
 
 npx create-react-app temperature-converter --template typescript
 

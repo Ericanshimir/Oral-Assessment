@@ -1,21 +1,17 @@
-// Node class representing each element in the LinkedList
-class Node<T> {
+class ListNode<T> {
     value: T;
-    next: Node<T> | null;
+    next: ListNode<T> | null = null;
 
     constructor(value: T) {
         this.value = value;
-        this.next = null;
     }
 }
 
-// LinkedList class with methods to add, remove, and find elements
-class LinkedList<T> {
-    head: Node<T> | null = null;
+class MyLinkedList<T> {
+    head: ListNode<T> | null = null;
 
-    // Add a new element to the linked list
     add(value: T): void {
-        const newNode = new Node(value);
+        const newNode = new ListNode(value);
         if (!this.head) {
             this.head = newNode;
         } else {
@@ -25,14 +21,15 @@ class LinkedList<T> {
             }
             current.next = newNode;
         }
+        console.log(`Added value: ${value}`);
     }
 
-    // Remove an element from the linked list
     remove(value: T): void {
         if (!this.head) return;
 
         if (this.head.value === value) {
             this.head = this.head.next;
+            console.log(`Removed value: ${value}`);
             return;
         }
 
@@ -43,20 +40,23 @@ class LinkedList<T> {
 
         if (current.next !== null) {
             current.next = current.next.next;
+            console.log(`Removed value: ${value}`);
         }
     }
 
-    // Find and return a node with the specified value
-    find(value: T): Node<T> | null {
+    find(value: T): ListNode<T> | null {
         let current = this.head;
         while (current !== null) {
-            if (current.value === value) return current;
+            if (current.value === value) {
+                console.log(`Found value: ${value}`);
+                return current;
+            }
             current = current.next;
         }
+        console.log(`Value ${value} not found`);
         return null;
     }
 
-    // Print all elements in the linked list (for testing purposes)
     print(): void {
         let current = this.head;
         while (current !== null) {
@@ -66,11 +66,30 @@ class LinkedList<T> {
     }
 }
 
+<<<<<<< Updated upstream
 // Example:
 const list = new LinkedList<number>();
+=======
+// Example usage
+const list = new MyLinkedList<number>(); 
+>>>>>>> Stashed changes
 list.add(1);
 list.add(2);
 list.add(3);
 list.print(); // Output: 1, 2, 3
+
 list.remove(2);
 list.print(); // Output: 1, 3
+
+const foundNode = list.find(3);
+if (foundNode) {
+    console.log(`Found node with value: ${foundNode.value}`); // Output: Found node with value: 3
+} else {
+    console.log("Node not found");
+}
+
+// If you need another list, use a different variable name like 'anotherList'
+const anotherList = new MyLinkedList<number>(); 
+anotherList.add(4);
+anotherList.add(5);
+anotherList.print(); // Output: 4, 5

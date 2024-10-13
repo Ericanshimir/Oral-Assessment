@@ -19,6 +19,7 @@ printList: Display the list.
 # How to Run
 
 Compile the TypeScript file:
+
 bash```
 tsc LinkedList.ts
 ```

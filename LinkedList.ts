@@ -66,10 +66,8 @@ class MyLinkedList<T> {
     }
 }
 
-<<<<<<< Updated upstream
 // Example:
 const list = new LinkedList<number>();
-=======
 // Example usage
 const list = new MyLinkedList<number>(); 
 >>>>>>> Stashed changes

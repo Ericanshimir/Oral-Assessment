@@ -66,7 +66,7 @@ class LinkedList<T> {
     }
 }
 
-// Example usage:
+// Example:
 const list = new LinkedList<number>();
 list.add(1);
 list.add(2);

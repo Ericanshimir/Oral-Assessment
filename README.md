@@ -16,7 +16,19 @@ find: Find elements.
 
 printList: Display the list.
 
+# Project Structure
+
+LinkedList.ts: Contains the main implementation of the linked list class and methods for adding, removing, finding, and printing elements.
+
+LinkedList.js: The compiled JavaScript file generated from the TypeScript source.
+
 # How to Run
+
+Install TypeScript (if not already installed):
+
+```bash
+npm install -g typescript
+```
 
 Compile the TypeScript file:
 
@@ -31,6 +43,42 @@ Run the compiled file:
 node LinkedList.js
 
 ```
+
+# Example Usage:
+
+```bash
+const list = new MyLinkedList<number>();
+list.add(1);
+list.add(2);
+list.add(3);
+list.print(); // Output: 1, 2, 3
+
+list.remove(2);
+list.print(); // Output: 1, 3
+
+const foundNode = list.find(3);
+if (foundNode) {
+    console.log(`Found node with value: ${foundNode.value}`);
+} else {
+    console.log("Node not found");
+}
+```
+# Output
+
+```bash
+Added value: 1
+Added value: 2
+Added value: 3
+1
+2
+3
+Removed value: 2
+1
+3
+Found value: 3
+Found node with value: 3
+```
+
 # 2. Temperature Converter (React, TypeScript)
 
 # Overview

@@ -26,7 +26,7 @@ tsc LinkedList.ts
 
 Run the compiled file:
 
-bash```
+```bash
 
 node LinkedList.js
 
@@ -48,7 +48,7 @@ npx create-react-app temperature-converter --template typescript
 Replace App.tsx with the provided code.
 
 Start the app:
-bash```
+```bash
 npm start
 
 ```
